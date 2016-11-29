@@ -28,6 +28,12 @@ $ npm start
 
 You should see your app here.  If you don't see anything, check your "npm start" terminal tab for error output, or the web browser's console. 
 
+## Deploying
+
+This project assumes you're just taking the index.html file + bundle.js, and moving that onto some other webserver. 
+
+So build the bundle.js using `$ webpack`.
+
 
 ## Linting
 
