@@ -1,0 +1,44 @@
+.AlarmNotice {
+	background: $lightRed;
+	padding: 0.75rem $bodyHorizontalPadding;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	a {
+		text-decoration: none;
+	}
+	&-Info {
+		font-size: $textSizeSubheading;
+		font-weight: 500;
+		span {
+			font-weight: 400;
+		}
+	}
+	&-View, .AlarmNotice-Dismiss {
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: medium;
+		cursor: pointer;
+	}
+	&-View {
+		color: $lightRed;
+		background: white;
+		box-shadow: $z2;
+		padding: 0.25rem 1rem;
+		border-radius: 2px;
+		margin-left: 2rem;
+		margin-right: 1rem;
+		transition: all .2s;
+		&:hover {
+			box-shadow: $z3;
+			color: $lightRed;
+		}
+	}
+	&-Dismiss {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

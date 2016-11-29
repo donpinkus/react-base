@@ -1,0 +1,236 @@
+// @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,400italic);
+
+@import 'bootstrap';
+@import 'variables';
+@import 'fonts';
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  .Footer {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    a {
+      font-size: 13px;
+      color: #a7b4c7;
+      letter-spacing: 0px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    a + a {
+      margin-left: 1rem;
+    }
+    img {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// TODO: refactor this stuff
+.hidden {
+  display: none !important;
+}
+
+.Graph {
+  &-Container {
+    background: white;
+    width: 100%;
+    padding: 2rem 1.5rem 2rem 0;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.07);
+  }
+  &-Content {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.container-fluid {
+  padding-left: $bodyHorizontalPadding;
+  padding-right: $bodyHorizontalPadding;
+}
+
+.NavLink {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item + .nav-item {
+  margin-left: 1.25rem !important;
+}
+
+.nav-item {
+  .NavIcon-Fill {
+    fill: #96979A !important;
+  }
+  &:hover {
+    .NavIcon-Fill {
+      fill: rgba(255, 255, 255, 0.75) !important;
+    }
+  }
+}
+
+.nav-item.active {
+  .NavIcon-Fill {
+    fill: #DE717C !important;
+  }
+}
+
+.NavIcon {
+  margin-right: 0.5rem;
+}
+
+.navbar {
+  padding-left: $bodyHorizontalPadding;
+  padding-right: $bodyHorizontalPadding;
+}
+
+.Loading {
+  opacity: 0.8;
+  text-align: center;
+}
+
+.navbar-brand {
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  span {
+    font-size: 10px;
+    opacity: 0.36;
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+}
+
+html {
+  background: #F6F6F6;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif !important;
+  font-weight: 400;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #F6F6F6;
+    color: #4E5053;
+    margin: 0;
+    font-family: 'Lato', sans-serif !important;
+  }
+  
+  h1 {
+    font-size: 46px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+  input[type="text"], input[type="password"], textarea {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    outline: none;
+    &:focus {
+      border: 1px solid #3C7FFA;
+    }
+  }
+
+  input[type="text"], input[type="password"] {
+    height: 34px;
+  }
+}
+
+.PaddedPageContent {
+  padding: 0 1.5rem;
+}
+
+.Button {
+  background-image: linear-gradient(-180deg, #4898FF 0%, #2E80FF 100%);
+  box-shadow: 0px 2px 4px 0px rgba(84,62,62,0.31);
+  border-radius: 4px;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  padding: 0.66rem 2rem 0.99rem;
+  border: none;
+  cursor: pointer;
+  font-variant: small-caps;
+  &:hover {
+    box-shadow: 0px 2px 4px 0px rgba(84,62,62,0.51);
+  }
+  &.disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+// Override bootstrap
+.navbar {
+  border-radius: 0;
+ 
+}
+.navbar.navbar-dark {
+  background: #37393F !important;
+}
+
+.nav-item .nav-link {
+  // color: rgba(255, 255, 255, 0.84) !important;
+}
+.nav-item.active .nav-link {
+  color: #E1727D !important;
+}
+
+.Footer {
+  margin-top: 4rem;
+  &-Copyright {
+    color: rgba(0, 0, 0, 0.3);
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+    }
+  }
+}
+
+// Containers
+@import 'settings-page';
+@import 'performance-page';
+@import 'alarm-page';
+@import 'log-page';
+
+// Components
+@import 'alarm-card';
+@import 'settings-card';
+@import 'alarm-notice';
+
+

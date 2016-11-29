@@ -1,0 +1,113 @@
+.SettingsPage {
+	&-Content {
+		padding: 2rem $bodyHorizontalPadding 0 $bodyHorizontalPadding;
+		display: flex;
+		flex-direction: row;
+	}
+	&-Nav {
+		width: 260px;
+		padding-top: 1.5rem;
+		p {
+			color: $textColor2;
+			font-weight: 700;
+			margin-bottom: 5px;
+			font-size: 0.9rem;
+		}
+	}
+	&-NavItem {
+		color: $textColor2;
+		display: block;
+		line-height: 2.5rem;
+		cursor: pointer;
+		&:hover {
+			color: $textColorPrimary;
+			text-decoration: none;
+		}
+		&.active {
+			color: $textColorPrimary;
+		}
+	}
+	&-Tab {
+		flex: 1;
+	}
+	&-SectionTitle {
+		font-size: $textSizeDisplay1;
+		color: $textColor1;
+	}
+	&-SectionContent {
+		margin-left: -8px;
+		margin-right: -8px;
+		display: flex;
+		flex-wrap: wrap;
+		&--HasSubsections {
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&-SubSection {
+
+	}
+	.SettingsPage-SubSection + .SettingsPage-SubSection {
+		margin-top: 2rem;
+	}
+	&-SubSectionTitle {
+		font-size: $textSizeHeadline;
+	}
+	&-SubSectionContent {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+	&-ObjectTile {
+		margin: 8px;
+		background: white;
+    width: 112px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $z1;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+    	box-shadow: $z2;
+    	margin: 4px;
+    	width: 120px;
+    	height: 120px;
+    }
+	}
+	&-ObjectTileTitle {
+		font-size: $textSizeDisplay1;
+	}
+	&-ObjectTileTitle--String {
+		font-size: $textSizeTitle;
+	}
+	.SettingsPage-Section + .SettingsPage-Section {
+		margin-top: 80px;
+	}
+	&-IndicatorContainer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 15px;
+	}
+	&-Indicator {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		margin-top: 1px;
+		&--Green {
+			background: #1FDE97;
+		}
+		&--Red {
+			background: #F95759;
+		}
+	}
+	.SettingsPage-Indicator + .SettingsPage-IndicatorMessage {
+		margin-left: 8px;
+	}
+}

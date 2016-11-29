@@ -1,0 +1,31 @@
+.AlarmPage {
+	&-Title {
+		margin-bottom: 1rem;
+	}
+	&-Filter {
+		font-size: 12px;
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
+	}
+	&-FilterLabel {
+		color: #7B879C;
+		
+	}
+	&-FilterValue {
+		margin-left: 0.75rem;
+		color: #0fa3ff;
+		text-transform: uppercase;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+		&.active {
+			color: #7b7b7b;
+			font-weight: 600;
+			cursor: default;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
